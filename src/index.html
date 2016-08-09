@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Grocery List Manager</title>
-    <base href="/"/>
+    <!--<base href="/"/>-->
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="vendor/angular-material/angular-material.css"/>
     <link rel="stylesheet" href="styles/main.css"/>
@@ -14,7 +14,7 @@
 <div flex layout="row" layout-fill>
     <md-content flex layout="row" layout-align="start stretch">
         <div ui-view="leftnav" flex="20"></div>
-        <div ui-view="content" flex="80"></div>
+        <div ui-view="content" flex="80" layout-margin></div>
     </md-content>
 </div>
 
@@ -37,8 +37,12 @@
 <script src="app/layout/topnav.controller.js"></script>
 <script src="app/layout/leftnav.controller.js"></script>
 <!-- Features -->
-<script src="app/home/home.routes.js"></script>
-<script src="app/home/home.controller.js"></script>
+<script src="app/ingredients/ingredients.routes.js"></script>
+<script src="app/ingredients/ingredients.controller.js"></script>
+<script src="app/recipes/recipes.routes.js"></script>
+<script src="app/recipes/recipes.controller.js"></script>
+<script src="app/calendar/calendar.routes.js"></script>
+<script src="app/calendar/calendar.controller.js"></script>
 <!-- endbuild -->
 </body>
 </html>

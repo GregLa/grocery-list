@@ -9,7 +9,7 @@
 
         this.$get = RouterHelper;
 
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(false);
 
         RouterHelper.$inject = ['$state'];
         /* @ngInject */

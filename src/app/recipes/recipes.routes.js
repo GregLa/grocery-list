@@ -15,13 +15,13 @@
     function getStates(TEMPLATE_URL) {
         return [
             {
-                state: 'root.home',
+                state: 'root.recipes',
                 config: {
-                    url: '/',
+                    url: '/recipes',
                     views: {
                         'content@' : {
-                            templateUrl: TEMPLATE_URL + 'home/home.html',
-                            controller: 'HomeController',
+                            templateUrl: TEMPLATE_URL + 'recipes/recipes.html',
+                            controller: 'Recipes',
                             controllerAs: 'vm'
                         }
                     }

@@ -3,21 +3,21 @@
 
     angular
         .module('grocery-list')
-        .controller('TopNavigation', TopNavigation);
+        .controller('Calendar', Calendar);
 
-    // TopNavigation.$inject = [''];
+    // Calendar.$inject = [''];
 
     /* @ngInject */
-    function TopNavigation() {
+    function Calendar() {
         var vm = this;
-        vm.title = 'Grocery List Manager';
+        vm.title = 'Calendar';
 
         activate();
 
         ////////////////
 
         function activate() {
-            // Controller initialization goes here
+
         }
     }
 
