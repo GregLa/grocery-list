@@ -1,0 +1,6 @@
+# IntelliJ project files
+.idea
+*.iml
+/node_modules/
+/src/vendor/
+/src/styles/main.css

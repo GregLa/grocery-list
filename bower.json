@@ -1,0 +1,27 @@
+{
+  "name": "grocery-list",
+  "description": "Grocery list manager with a planning tool",
+  "main": "src/app/app.module.js",
+  "authors": [
+    "Gregoire Lagoutte"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "material",
+    "grocery"
+  ],
+  "homepage": "https://github.com/GregLa/grocery-list",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.0.9",
+    "angular-ui-router": "^0.3.1"
+  }
+}

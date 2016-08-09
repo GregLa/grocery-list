@@ -1,0 +1,34 @@
+{
+  "name": "grocery-list",
+  "description": "Grocery list manager with a planning tool",
+  "version": "1.0.0",
+  "main": "src/app/app.module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://GregLa@github.com/GregLa/grocery-list.git"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "grocery"
+  ],
+  "author": "Gregoire Lagoutte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GregLa/grocery-lis/issues"
+  },
+  "homepage": "https://github.com/GregLa/grocery-lis#readme",
+  "dependencies": {
+    "browser-sync": "^2.13.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4",
+    "gulp-useref": "^3.1.0"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery List Manager</title>
+    <base href="/"/>
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="vendor/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+    <!--endbuild-->
+</head>
+<body ng-app="grocery-list">
+<div ui-view="topnav"></div>
+<div flex layout="row" layout-fill>
+    <md-content flex layout="row" layout-align="start stretch">
+        <div ui-view="leftnav" flex="20"></div>
+        <div ui-view="content" flex="80"></div>
+    </md-content>
+</div>
+
+
+<!--build:js script/vendor.min.js -->
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="vendor/angular-animate/angular-animate.js"></script>
+<script src="vendor/angular-aria/angular-aria.js"></script>
+<script src="vendor/angular-messages/angular-messages.js"></script>
+<script src="vendor/angular-material/angular-material.js"></script>
+<!-- endbuild -->
+
+<!--build:js script/app.min.js -->
+<script src="app/app.module.js"></script>
+<script src="app/app.config.js"></script>
+<!-- Provider -->
+<script src="app/services/routerHelperProvider.js"></script>
+<!-- Layout -->
+<script src="app/layout/topnav.controller.js"></script>
+<script src="app/layout/leftnav.controller.js"></script>
+<!-- Features -->
+<script src="app/home/home.routes.js"></script>
+<script src="app/home/home.controller.js"></script>
+<!-- endbuild -->
+</body>
+</html>
