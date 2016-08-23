@@ -3,21 +3,34 @@
 
     angular
         .module('grocery-list')
-        .controller('Ingredients', Ingredients);
+        .controller('IngredientsCtrl', IngredientsCtrl);
 
-    // Ingredients.$inject = [''];
+    IngredientsCtrl.$inject = ['Ingredients', '$mdDialog', 'TEMPLATE_URL'];
 
     /* @ngInject */
-    function Ingredients() {
+    function IngredientsCtrl(Ingredients, $mdDialog, TEMPLATE_URL) {
         var vm = this;
         vm.title = 'Ingredients';
+        vm.ingredients = Ingredients.ingredient_list;
 
-        activate();
-
+        vm.showCreateOrUpdateIngredients = showCreateOrUpdateIngredients;
         ////////////////
 
-        function activate() {
-
+        function showCreateOrUpdateIngredients(ev) {
+            $mdDialog.show({
+                controller: 'IngredientsCreateUpdate',
+                controllerAs: 'vm',
+                templateUrl: TEMPLATE_URL + 'ingredients/ingredients.create_update.html',
+                parent: angular.element(document.body),
+                targetEvent: ev,
+                clickOutsideToClose:false
+            })
+            .then(function(ingredient) {
+                console.log(ingredient);
+                Ingredients.addIngredient(ingredient);
+            }, function() {
+                console.log('cancelled');
+            });
         }
     }
 

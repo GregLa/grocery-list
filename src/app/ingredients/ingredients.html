@@ -1,3 +1,21 @@
-<md-content>
-    <h2>{{ vm.title }}</h2>
+<md-content layout="row">
+    <h2 flex="15">{{ vm.title }}</h2>
+    <div flex></div>
+    <md-button flex="15" class="md-raised" ng-click="vm.showCreateOrUpdateIngredients($event)">Add ingredient</md-button>
 </md-content>
+
+<md-list>
+    <md-list-item ng-repeat="ingredient in vm.ingredients" class="noright md-2-line">
+        <img ng-src="{{ingredient.img}}" class="md-avatar" alt="{{ingredient.name}}" />
+        <div class="md-list-item-text" layout="column">
+            <h3>{{ ingredient.name }}</h3>
+            <p>{{ ingredient.alimentary_group }}</p>
+        </div>
+        <md-button class="md-icon-button" aria-label="Edit">
+            <md-icon class="material-icons" aria-label="Edit">mode_edit</md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Delete">
+            <md-icon class="material-icons" aria-label="Delete">delete</md-icon>
+        </md-button>
+    </md-list-item>
+</md-list>

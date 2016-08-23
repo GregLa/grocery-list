@@ -1,0 +1,42 @@
+<md-dialog aria-label="add ingredient">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Add ingredient</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon class="material_icon" aria-label="Close">close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content" layout="column">
+                <md-input-container class="md-block">
+                    <label>Name</label>
+                    <input required name="name" ng-model="vm.name">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Image URL</label>
+                    <input name="image" ng-model="vm.img">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Alimentary Group</label>
+                    <md-select required ng-model="vm.alimentary_group">
+                        <md-option ng-repeat="alimentary_group in vm.alimentary_groups" value="{{ alimentary_group }}">
+                            {{ alimentary_group }}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button class="md-raised" ng-click="cancel()">
+                Cancel
+            </md-button>
+            <md-button class="md-raised md-primary" ng-click="answer()">
+                Validate
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

@@ -21,7 +21,7 @@
                     views: {
                         'content@' : {
                             templateUrl: TEMPLATE_URL + 'ingredients/ingredients.html',
-                            controller: 'Ingredients',
+                            controller: 'IngredientsCtrl',
                             controllerAs: 'vm'
                         }
                     }
