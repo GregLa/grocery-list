@@ -1,7 +1,7 @@
 <md-content layout="row">
     <h2 flex="15">{{ vm.title }}</h2>
     <div flex></div>
-    <md-button flex="15" class="md-raised" ng-click="vm.showCreateOrUpdateIngredients($event)">Add ingredient</md-button>
+    <md-button flex="15" class="md-raised" ng-click="vm.showCreateOrUpdateIngredients($event, null)">Add ingredient</md-button>
 </md-content>
 
 <md-list>
@@ -11,10 +11,10 @@
             <h3>{{ ingredient.name }}</h3>
             <p>{{ ingredient.alimentary_group }}</p>
         </div>
-        <md-button class="md-icon-button" aria-label="Edit">
+        <md-button class="md-icon-button" aria-label="Edit" ng-click="vm.showCreateOrUpdateIngredients($event, ingredient.id)">
             <md-icon class="material-icons" aria-label="Edit">mode_edit</md-icon>
         </md-button>
-        <md-button class="md-icon-button" aria-label="Delete">
+        <md-button class="md-icon-button" aria-label="Delete" ng-click="vm.deleteIngredient( ingredient.id )">
             <md-icon class="material-icons" aria-label="Delete">delete</md-icon>
         </md-button>
     </md-list-item>
